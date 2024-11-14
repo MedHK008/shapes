@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/hkmed/shapes/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/shape.dir/main.cpp.o -c /home/hkmed/shapes/main.cpp",
+  "file": "/home/hkmed/shapes/main.cpp",
+  "output": "CMakeFiles/shape.dir/main.cpp.o"
+},
+{
+  "directory": "/home/hkmed/shapes/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/shape.dir/Square.cpp.o -c /home/hkmed/shapes/Square.cpp",
+  "file": "/home/hkmed/shapes/Square.cpp",
+  "output": "CMakeFiles/shape.dir/Square.cpp.o"
+},
+{
+  "directory": "/home/hkmed/shapes/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/shape.dir/Circle.cpp.o -c /home/hkmed/shapes/Circle.cpp",
+  "file": "/home/hkmed/shapes/Circle.cpp",
+  "output": "CMakeFiles/shape.dir/Circle.cpp.o"
+}
+]
