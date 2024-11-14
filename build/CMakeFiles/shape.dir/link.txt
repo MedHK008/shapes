@@ -1,1 +1,1 @@
-/usr/bin/g++ -g CMakeFiles/shape.dir/main.cpp.o CMakeFiles/shape.dir/Square.cpp.o CMakeFiles/shape.dir/Circle.cpp.o -o shape 
+/usr/bin/c++ -fPIC -Wl,--dependency-file,CMakeFiles/shape.dir/link.d -shared -Wl,-soname,libshape.so -o libshape.so CMakeFiles/shape.dir/source/Square.cpp.o CMakeFiles/shape.dir/source/Circle.cpp.o CMakeFiles/shape.dir/source/Lozenge.cpp.o CMakeFiles/shape.dir/source/Triangle.cpp.o

@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file,CMakeFiles/Shapes.dir/link.d CMakeFiles/Shapes.dir/main.cpp.o -o Shapes  -Wl,-rpath,/home/medhk/shapes/build libshape.so
