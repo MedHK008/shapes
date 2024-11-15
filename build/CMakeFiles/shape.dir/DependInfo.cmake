@@ -8,11 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/medhk/shapes/source/Circle.cpp" "CMakeFiles/shape.dir/source/Circle.cpp.o" "gcc" "CMakeFiles/shape.dir/source/Circle.cpp.o.d"
-  "/home/medhk/shapes/source/Lozenge.cpp" "CMakeFiles/shape.dir/source/Lozenge.cpp.o" "gcc" "CMakeFiles/shape.dir/source/Lozenge.cpp.o.d"
-  "/home/medhk/shapes/source/Square.cpp" "CMakeFiles/shape.dir/source/Square.cpp.o" "gcc" "CMakeFiles/shape.dir/source/Square.cpp.o.d"
-  "/home/medhk/shapes/source/Triangle.cpp" "CMakeFiles/shape.dir/source/Triangle.cpp.o" "gcc" "CMakeFiles/shape.dir/source/Triangle.cpp.o.d"
-  "" "libshape.so" "gcc" "CMakeFiles/shape.dir/link.d"
+  "/home/hkmed/shapes/source/Circle.cpp" "CMakeFiles/shape.dir/source/Circle.cpp.o" "gcc" "CMakeFiles/shape.dir/source/Circle.cpp.o.d"
+  "/home/hkmed/shapes/source/Lozenge.cpp" "CMakeFiles/shape.dir/source/Lozenge.cpp.o" "gcc" "CMakeFiles/shape.dir/source/Lozenge.cpp.o.d"
+  "/home/hkmed/shapes/source/Square.cpp" "CMakeFiles/shape.dir/source/Square.cpp.o" "gcc" "CMakeFiles/shape.dir/source/Square.cpp.o.d"
+  "/home/hkmed/shapes/source/Triangle.cpp" "CMakeFiles/shape.dir/source/Triangle.cpp.o" "gcc" "CMakeFiles/shape.dir/source/Triangle.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

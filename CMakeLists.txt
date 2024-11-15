@@ -22,26 +22,12 @@ add_executable(Shapes main.cpp)
 
 target_link_libraries(Shapes shape)
 
-# install(TARGETS shape
-#     LIBRARY DESTINATION lib
-#     ARCHIVE DESTINATION lib
-#     RUNTIME DESTINATION bin
-# )
-
-# install(DIRECTORY headers/
-#     DESTINATION include
-#     FILES_MATCHING PATTERN "*.h"
-# )
-
-# # Generate the package configuration file
-# include(CMakePackageConfigHelpers)
-# configure_package_config_file(
-#     "${CMAKE_CURRENT_SOURCE_DIR}/shapeConfig.cmake.in"
-#     "${CMAKE_CURRENT_BINARY_DIR}/shapeConfig.cmake"
-#     INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/shape
-# )
-
-# install(FILES
-#     "${CMAKE_CURRENT_BINARY_DIR}/shapeConfig.cmake"
-#     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/shape
-# )
+install(TARGETS shape
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+    RUNTIME DESTINATION bin
+)
+install(DIRECTORY headers/
+    DESTINATION include
+    FILES_MATCHING PATTERN "*.h"
+)

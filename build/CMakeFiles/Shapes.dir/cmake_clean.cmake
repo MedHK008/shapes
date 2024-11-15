@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Shapes.dir/link.d"
   "CMakeFiles/Shapes.dir/main.cpp.o"
   "CMakeFiles/Shapes.dir/main.cpp.o.d"
   "Shapes"

@@ -1,6 +1,6 @@
 CMakeFiles/shape.dir/source/Square.cpp.o: \
- /home/medhk/shapes/source/Square.cpp /usr/include/stdc-predef.h \
- /home/medhk/shapes/headers/Square.h /home/medhk/shapes/headers/Shape.h \
+ /home/hkmed/shapes/source/Square.cpp /usr/include/stdc-predef.h \
+ /home/hkmed/shapes/headers/Square.h /home/hkmed/shapes/headers/Shape.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

@@ -1,7 +1,7 @@
 CMakeFiles/shape.dir/source/Lozenge.cpp.o: \
- /home/medhk/shapes/source/Lozenge.cpp /usr/include/stdc-predef.h \
- /home/medhk/shapes/source/../headers/Lozenge.h \
- /home/medhk/shapes/source/../headers/Shape.h \
+ /home/hkmed/shapes/source/Lozenge.cpp /usr/include/stdc-predef.h \
+ /home/hkmed/shapes/source/../headers/Lozenge.h \
+ /home/hkmed/shapes/source/../headers/Shape.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

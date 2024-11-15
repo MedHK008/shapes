@@ -8,8 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/medhk/shapes/main.cpp" "CMakeFiles/Shapes.dir/main.cpp.o" "gcc" "CMakeFiles/Shapes.dir/main.cpp.o.d"
-  "" "Shapes" "gcc" "CMakeFiles/Shapes.dir/link.d"
+  "/home/hkmed/shapes/main.cpp" "CMakeFiles/Shapes.dir/main.cpp.o" "gcc" "CMakeFiles/Shapes.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
