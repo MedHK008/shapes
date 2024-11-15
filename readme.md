@@ -1,8 +1,10 @@
 ## dynamic library
+> **Warning**: this was done on linux, the lib file is .so, and installation directories are linux os's
+
+
 this is a dynamic library, can be static if we replace the `SHARED` with `STATIC` in `CMakeLists.txt` :
 
 ```sh
-
 add_library(
     shape SHARED/STATIC
     source/Square.cpp source/Circle.cpp 
@@ -32,53 +34,51 @@ add_library(
 - **Performance**: May have a slight overhead at runtime due to dynamic linking.
 - **Updates**: You can update the library without recompiling the application, as long as the interface (API) remains compatible.
 
-### Example in 
+## How to use this library on other project
 
-CMakeLists.txt
+### the current project code
+the cmake files conatain the part : 
 
-
-To create a `static` library:
-```cmake
-
-add_library(shape STATIC
-    source/Square.cpp source/Circle.cpp 
-    source/Lozenge.cpp source/Triangle.cpp
-    headers/Square.h headers/Circle.h
-    headers/SquareFactory.h headers/CircleFactory.h
-    headers/ShapeFactory.h headers/Shape.h
-    headers/Lozenge.h headers/LozengeFactory.h
-    headers/Triangle.h headers/TriangleFactory.h
+``` cmake
+install(TARGETS shape
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+    RUNTIME DESTINATION bin
 )
-```
-
-To create a `dynamic` library:
-```cmake
-add_library(shape SHARED
-    source/Square.cpp source/Circle.cpp 
-    source/Lozenge.cpp source/Triangle.cpp
-    headers/Square.h headers/Circle.h
-    headers/SquareFactory.h headers/CircleFactory.h
-    headers/ShapeFactory.h headers/Shape.h
-    headers/Lozenge.h headers/LozengeFactory.h
-    headers/Triangle.h headers/TriangleFactory.h
+install(DIRECTORY headers/
+    DESTINATION include
+    FILES_MATCHING PATTERN "*.h"
 )
-```
 
-there is a part of the `cmake file` commented, i used it to install the library on my system, so that i can use it in another program, without having the .cpp and .h in and .so file in the project directory, in the new project - the one without the source files- i tried with the same main, and a `cmakeLists` : 
+install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/shapeConfig.cmake"
+    DESTINATION lib/cmake/shape)
+```
+The first `install` command is used to install the target named `shape`. The `TARGETS` keyword indicates that this command is dealing with a target, which is typically an executable or a library, in our case a library. The `LIBRARY DESTINATION lib` line specifies that any shared libraries associated with the `shape` target should be installed in the `lib` directory. Similarly, `ARCHIVE DESTINATION lib` indicates that static libraries should also be placed in the `lib` directory, i included this line for explanatory reasons. The `RUNTIME DESTINATION bin` line specifies that executable files should be installed in the `bin` directory.
+
+The second `install` command is used to install header files. The `DIRECTORY` keyword indicates that a directory is being installed. The `headers` directory is specified as the source, and the `DESTINATION include` line indicates that the header files should be installed in the `include` directory. The `FILES_MATCHING PATTERN "*.h"` part ensures that only files with the `.h` extension (header files) are included in this installation step.
+
+The third `install` command installs a specific file,`shapeConfig.cmake`, which is a configuration file for the `shape` project. The `FILES` keyword is used to specify individual files to be installed. The `${CMAKE_CURRENT_SOURCE_DIR}/shapeConfig.cmake` part uses a CMake variable to specify the path to the file relative to the current source directory. The `DESTINATION lib/cmake/shape` line indicates that this file should be installed in the `lib/cmake/shape` directory.
+
+### the new project you want to use this lib in
+
+with this cmake Code : 
 
 ```cmake
 cmake_minimum_required(VERSION 3.10)
-project(NewProject)
+project(testShapes)
 
 set(CMAKE_PREFIX_PATH "/usr/local")
 
-find_package(shape REQUIRED)
 
-include_directories(${Shape_INCLUDE_DIRS})
+find_package(shape REQUIRED CONFIG)
 
-add_executable(new_project main.cpp)
+include_directories(${shape_INCLUDE_DIRS})
 
-target_link_libraries(new_project ${Shape_LIBRARIES})
+add_executable(testShapes main.cpp)
+
+target_link_libraries(testShapes ${shape_LIBRARIES})
 ```
 
-still working on it.
+The `set` command is used to define the `CMAKE_PREFIX_PATH` variable, which specifies the base directory for searching for packages. Here, it is set to `/usr/local`, the directory in which we installed the liberary component in the first library project, indicating that CMake should look in this directory for any required packages.
+
+The `find_package` command is used to locate the `shape` package, which is required for this project. The `REQUIRED` keyword ensures that CMake will generate an error if the `shape` package is not found. The `CONFIG` keyword indicates that the package should be found using a configuration file,named `shapeConfig.cmake` The `include_directories` command adds the directories specified by the `shape_INCLUDE_DIRS` variable to the list of directories that the compiler will search for header files. This variable is set by the `shape` package configuration file.
