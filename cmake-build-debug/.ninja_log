@@ -1,0 +1,10 @@
+# ninja log v6
+3	948	1731658501162513490	CMakeFiles/shape.dir/source/Triangle.cpp.o	36080c491e128267
+2	975	1731658501161513490	CMakeFiles/shape.dir/source/Square.cpp.o	8c8729b8a62b6659
+4	994	1731658501163513490	CMakeFiles/Shapes.dir/main.cpp.o	a10ee217ac2fa57d
+3	1158	1731658501162513490	CMakeFiles/shape.dir/source/Lozenge.cpp.o	af52bbf7d0ed3e72
+2	1214	1731658501161513490	CMakeFiles/shape.dir/source/Circle.cpp.o	cb12f2e70e1cdf26
+1214	1307	1731658502373513588	libshape.so	bf0a0b2b9c75d9f0
+1307	1413	1731658502466513596	Shapes	4eeb6d71c563ae3c
+7	740	1731658637538524557	CMakeFiles/Shapes.dir/main.cpp.o	a10ee217ac2fa57d
+740	852	1731658638271524616	Shapes	4eeb6d71c563ae3c

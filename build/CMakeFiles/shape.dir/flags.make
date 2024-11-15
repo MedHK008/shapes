@@ -6,5 +6,5 @@ CXX_DEFINES = -Dshape_EXPORTS
 
 CXX_INCLUDES = -I/home/hkmed/shapes/headers
 
-CXX_FLAGS = -fPIC
+CXX_FLAGS = -g -fPIC
 

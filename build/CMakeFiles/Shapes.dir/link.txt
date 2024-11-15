@@ -1,1 +1,1 @@
-/usr/bin/g++ CMakeFiles/Shapes.dir/main.cpp.o -o Shapes  -Wl,-rpath,/home/hkmed/shapes/build libshape.so 
+/usr/bin/g++ -g CMakeFiles/Shapes.dir/main.cpp.o -o Shapes  -Wl,-rpath,/home/hkmed/shapes/build libshape.so 

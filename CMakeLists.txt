@@ -31,3 +31,6 @@ install(DIRECTORY headers/
     DESTINATION include
     FILES_MATCHING PATTERN "*.h"
 )
+
+install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/shapeConfig.cmake"
+    DESTINATION lib/cmake/shape)

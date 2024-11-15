@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/hkmed/shapes/headers
 
-CXX_FLAGS = 
+CXX_FLAGS = -g
 

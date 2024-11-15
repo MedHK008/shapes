@@ -9,10 +9,8 @@
 
 using namespace std;
 
-
 int main()
 {
-
     ShapeFactory* squareFactory=new SquareFactory();
     ShapeFactory* circleFactory=new CircleFactory();
     ShapeFactory* triangleFactory=new TriangleFactory();
